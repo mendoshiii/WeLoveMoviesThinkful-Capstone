@@ -2,7 +2,7 @@
 
 Backend files built for a webpage used for a webpage project in a Thinkful.com's Software Engineering Immersion bootcamp.
 
-##Project: WeLoveMovies
+## Project: WeLoveMovies
 You've been hired on as a backend developer for a new startup called WeLoveMovies! As another developer works on the design and frontend experience, you have been tasked with setting up a database and building out specific routes so that users can gain access to data about movies, theaters, and reviews.
 
 home.png
@@ -23,7 +23,7 @@ Write database migrations using Knex's migration tools.
 Deploy your backend server to a cloud service.
 You will not need to make any edits to HTML or CSS for this project.
 
-##Project setup
+## Project setup
 Follow the instructions below to get this project up and running on your own machine:
 
 Visit the following repository if you would like to see your project connected to a frontend application:
@@ -31,7 +31,7 @@ Visit the following repository if you would like to see your project connected t
 Starter Code: WeLoveMovies
 Instructions are included there on how to get the project up and running.
 
-##Running tests
+## Running tests
 To run the tests, you can run the following command:
 
 npm test
@@ -39,10 +39,10 @@ Note that the tests make use of an in-memory SQLite database.
 
 Note: When updating a record in an in-memory SQLite database, the server does not automatically respond with an array of updated records like PostgreSQL does. As a result, when updating a record, you will need to query the database again to return updated record.
 
-##Instructions
+## Instructions
 You are tasked with both setting up the database and building a number of routes that will be used by the frontend application. For this project, you will start by making the necessary changes to the data tier and then proceed to make changes to the application tier following an inside-out development workflow. Each table is detailed below, as is each route.
 
-##General tasks
+## General tasks
 You will also need to make sure the following tasks are complete.
 
 Your app.js file and server.js file are correctly configured, with your app.js file exporting the application created from Express.
@@ -57,7 +57,7 @@ You will need to create migrations for each of these tables and run those migrat
 
 Seed data is included in this project in the ./src/db/seeds folder. The seeds will run correctly if and only if the tables are setup as described in the previous documents.
 
-##Routes
+## Routes
 You will create five routes for this project. View the docs/routes/ folder in this project to get more detailed information on each table.
 
 Note that some routes return data dependent on query parameters.
