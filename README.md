@@ -1,3 +1,3 @@
 # WeLoveMoviesFresh
 
-Backend files built for a webpage used in a Thinkful.com Software Engineering Immersion Bootcamp.
+Backend files built for a webpage used for a webpage project in a Thinkful.com's Software Engineering Immersion bootcamp.
