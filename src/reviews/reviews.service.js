@@ -1,5 +1,12 @@
 const knex = require("../db/connection");
 const mapProperties = require("../utils/map-properties");
+const reduceProperties = require("../utils/reduce-properties");
+
+const reduceCritics = reduceProperties("review_id", {
+  preferred_name: ["critic", null, "preferred_name"],
+  surname: ["critic", null, "surname"],
+  organization_name: ["critic", null, "organization_name"],
+});
 
 const addCritic = mapProperties({
   preferred_name: "critic.preferred_name",
@@ -8,10 +15,7 @@ const addCritic = mapProperties({
 });
 
 function read(reviewId) {
-  return knex("reviews")
-  .select("*")
-  .where({ review_id: reviewId })
-  .first();
+  return knex("reviews").select("*").where({ review_id: reviewId }).first();
 }
 
 function newCritic(reviewId) {
@@ -39,4 +43,6 @@ module.exports = {
   newCritic,
   update,
   delete: destroy,
+  reduceCritics,
+  addCritic,
 };

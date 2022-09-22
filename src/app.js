@@ -1,25 +1,27 @@
+// Core processes
 const cors = require("cors");
 const express = require("express");
 const app = express();
 
-// Error Handler
+// Error Handlers
 const errorHandler = require("./errors/errorHandler");
 const notFound = require("./errors/notFound");
 
 // Route Handlers
 const moviesRouter = require("../src/movies/movies.router");
-//const theatersRouter = require("./theaters/theaters.router");
+const theatersRouter = require("./theaters/theaters.router");
 const reviewsRouter = require("./reviews/reviews.router");
 
+// Cors enabled, express library required
 app.use(cors());
 app.use(express.json());
 
 // Routing
 app.use("/movies", moviesRouter);
+app.use("/theaters", theatersRouter);
 app.use("/reviews", reviewsRouter);
-//app.use("/theaters", theatersRouter);
 
-// Error Handler
+// Error Handlers
 app.use(notFound);
 
 app.use(errorHandler);
