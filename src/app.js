@@ -13,8 +13,8 @@ const theatersRouter = require("./theaters/theaters.router");
 const reviewsRouter = require("./reviews/reviews.router");
 
 // Cors enabled, express library required
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 
 // Routing
 app.use("/movies", moviesRouter);
