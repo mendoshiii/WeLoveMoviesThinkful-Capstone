@@ -1,3 +1,15 @@
+const knex = require("knex");
+const parse = require("pg-connection-string").parse;
+
+const pgconfig = parse(prcess.env.DATABASE_URL);
+
+pgconfig.ssl = { rejectUnauthorized: false };
+
+const db = knex({
+  client: "pg",
+  connection: pgconfig,
+});
+
 const path = require("path");
 
 require("dotenv").config();
@@ -42,4 +54,5 @@ module.exports = {
     },
     useNullAsDefault: true,
   },
+  db,
 };
