@@ -1,14 +1,14 @@
-const knex = require("knex");
-const parse = require("pg-connection-string").parse;
+// const knex = require("knex");
+// const parse = require("pg-connection-string").parse;
 
-const pgconfig = parse(process.env.DATABASE_URL);
+// const pgconfig = parse(process.env.DATABASE_URL);
 
-pgconfig.ssl = { rejectUnauthorized: false };
+// pgconfig.ssl = { rejectUnauthorized: false };
 
-const db = knex({
-  client: "pg",
-  connection: pgconfig,
-});
+// const db = knex({
+//   client: "pg",
+//   connection: pgconfig,
+// });
 
 const path = require("path");
 
